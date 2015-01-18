@@ -8,7 +8,6 @@ import sys, csv
 from datetime import datetime
 
 reader = csv.reader(sys.stdin, delimiter='\t')
-# writer = csv.writer(sys.stdout, delimiter='\t', quotechar='"', quoting=csv.QUOTE_ALL)
 next(reader, None)	# skip header
 
 for line in reader:
