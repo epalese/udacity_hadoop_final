@@ -1,4 +1,5 @@
 References:
+I mostly used stackoverflow.com to find sample solutions to Python coding problems. Following a list of the main issue I solved:
 - datetime Python module: https://docs.python.org/2/library/datetime.html
 - Parsing of datetimes with UTC offset needs to install the dateutil module that requires Python >= 2.7
 The VM provided has installed Python 2.6
@@ -6,3 +7,5 @@ For version of Python lesser than 3.0 there are some workaround:
 http://stackoverflow.com/questions/1101508/how-to-parse-dates-with-0400-timezone-string-in-python
 - find indexes of max elements in a list:
 http://stackoverflow.com/questions/3989016/how-to-find-positions-of-the-list-maximum
+- convert a string representation of a list in a python list:
+http://stackoverflow.com/questions/1894269/convert-string-representation-of-list-to-list-in-python
