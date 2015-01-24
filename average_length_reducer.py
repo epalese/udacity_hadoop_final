@@ -7,7 +7,7 @@ questionLength = 0
 countAnswerLength = 0
 countAnswers = 0
 
-# The mapper output will be a tab separated list: [authorid]\t[hour]\t[count]
+# input from the mapper: "authorid"\t"hour"\t"count"
 # The count field will contain always a value of 1 unless a combiner is used that will group results by authorid and hour   
 
 for line in sys.stdin:
