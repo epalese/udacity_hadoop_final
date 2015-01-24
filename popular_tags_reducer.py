@@ -2,11 +2,10 @@
 
 import sys
 
-# insert the element {tag: tagname, counts: value} in list
-# if value is greater than the minimum value of counts that
-# is already in the list. 
-# After the insertion, the element with the minimum value for
-# counts is removed 
+# This function insert the element {tag: tagname, counts: value} in taglist only if conuts value is greater than
+# the minimum value of counts already present in the list. 
+# After the insertion, the element with the minimum value for counts is removed.
+# The function in other words keeps the top 10 by counts elements in taglist.
 def insertTop10(element, taglist):
 	i = 0
 	inserted = False
@@ -39,7 +38,6 @@ for line in sys.stdin:
 		
 	if currentTag and currentTag != tag:
 		top10tags = insertTop10({'tag': currentTag, 'count': tagCount}, top10tags)
-		# print top10tags
 		tagCount = 0
 	
 	currentTag = tag
