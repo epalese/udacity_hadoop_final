@@ -7,8 +7,8 @@ oldWord = None
 
 # input: word\tnodes
 # Where 'nodes' is a list of one or more nodes whose body contains the word
-# If this script is used as a combiner 'nodes' will be a list with a single element.
-# If used as a reducer it will contain a list of nodes.
+# If this script is used as a combiner, 'nodes' will be a list with only one element.
+# If used as a reducer it will contain a comma-separted list of nodes.
 
 for line in sys.stdin:
     data_mapped = line.strip().split("\t")
@@ -31,6 +31,8 @@ for line in sys.stdin:
         wordNodes = []
 
     oldWord = thisWord
+    # split the comma-seperated list of nodes, remove leading and trailing white spaces and remove
+    # any Null element from the set
     nodesList = filter(None, [s.strip() for s in nodesListStr.split(',')])
     wordNodes.extend(nodesList)
 
