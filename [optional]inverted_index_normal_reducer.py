@@ -5,7 +5,7 @@ import sys
 wordNodes = []
 oldWord = None
 
-# input: word\tnode
+# input: "word"\t"node"
 # Where 'node' is the node whose body contains the word
 
 for line in sys.stdin:
