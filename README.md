@@ -7,6 +7,8 @@ In the following part of the document a brief description of the exercises will 
 
 All the exercises are based on the data that can be found in data/forum_data.tar.gz
 
+The file references.txt contains some (the main one) web resources used to develop the python scripts.
+
 ## Students and Posting Time on Forums
 Find for each student what is the hour during which the student has posted the most posts.
 - mapper: student_times_mapper.py
@@ -35,8 +37,31 @@ For example, if the output of the mapper will be:
   tag2  user3
   
 The value of T will be:
-  T(tag1) = 3 * (2 / 3) = 2
-  T(tag2) = 3 * (3 / 3) = 3
+    T(tag1) = 3 * (2 / 3) = 2
+    T(tag2) = 3 * (3 / 3) = 3
   
 - mapper: [optional]popular_tags_extra_mapper.py
 - reducer: [optional]popular_tags_extra_reducer.py
+
+## Study Groups
+Write  a mapreduce program that for each forum thread (that is a question node with all it's answers and comments) would give us a list of students that have posted there.
+- mapper: study_groups_mapper.py
+- reducer: study_groups_reducer.py
+
+## Search Functionality
+Improve the performances of the mapreduce code used to build an index of the words in posts. The index needs to list for each word all the posts (node ids) where the word appears.
+Note: do not parse and clean HTML tags.
+
+The mapreduce scripts for the normal (not improved) index-building are:
+- mapper: [optional]inverted_index_normal_mapper.py
+- reducer: [optional]inverted_index_normal_reducer.py
+
+The optimized version will use a combiner that pre-aggregate date on the mapper node before sending it to the reducer. The reducer is slighty different from the previous one:
+- mapper: [optional]inverted_index_optimized_mapper.py
+- reducer: [optional]inverted_index_optimized_reducer.py
+
+## Other Questions
+In providing a series of other questions that could be answered with mapreduce using the data set provided, an example map/reduce scripts have been developed.
+The scripts will help to understand if there is a correlation between the average length of a user posts and the average score the user has.
+- mapper: [optional]average_user_score_mapper.py
+- reducer: [optional]average_user_score_reducer.py
