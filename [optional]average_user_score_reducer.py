@@ -22,10 +22,12 @@ for line in sys.stdin:
 		continue 
 		
 	if currentAuthorId and currentAuthorId != authorId:
+		# calcuate the average score
 		if numOfScores > 0:
 			avgScore = sumOfScores / numOfScores
 		else:
 			avgScore = 0
+		# calculate the average body length
 		if numOfBodyLengths > 0:
 			avgBodyLength = sumOfBodyLengths / numOfBodyLengths
 		else:
