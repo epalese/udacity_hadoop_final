@@ -11,8 +11,8 @@ def findMaxHours(hoursCount):
 # An array is used to store user's post counts.
 # The array position corresponds to the hour: 
 # e.g: 
-# hoursCout[0] is 00.00 (12.00 AM)
-# hoursCount[20] is 20.00 (08.00 PM)
+# hoursCout[0] is the count for 00.00 (12.00 AM)
+# hoursCount[20] is the count for 20.00 (08.00 PM)
 hoursCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 currentAuthorId = None
 
